@@ -8,6 +8,7 @@ public class Main{
         Scanner scanner= new Scanner(System.in);
         DateTimeFormatter dtf= DateTimeFormatter.ofPattern("HH:mm:ss");
         LocalTime alarmtime=null;
+        String filePath = "D:\\ALARM\\file_example_WAV_1MG.wav";
         while(alarmtime==null){
             try{
                 System.out.print("enter an alarm time (HH:MM:SS): ");
@@ -23,12 +24,14 @@ public class Main{
 
         }
 
-        AlarmClock alarmclock= new AlarmClock(alarmtime);
+        AlarmClock alarmclock= new AlarmClock(alarmtime, filePath, scanner);
         Thread alarmThread=new Thread(alarmclock);
         alarmThread.start();
 
 
 
-        scanner.close();
+        
     }
+
+
 }
