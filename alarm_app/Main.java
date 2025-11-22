@@ -1,7 +1,8 @@
+
 import java.util.Scanner;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalTime;
-import java.time.format.DateTimeParseException;;
+import java.time.format.DateTimeParseException;
 public class Main{
     public static void main(String[] args) {
         Scanner scanner= new Scanner(System.in);
